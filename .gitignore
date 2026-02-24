@@ -1,0 +1,32 @@
+# --- Frontend (React/Node) ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.env
+frontend/src/gameLogic.test.js
+
+# --- Backend (Python/FastAPI) ---
+backend/venv/
+backend/.env
+backend/__pycache__/
+backend/*.py[cod]
+backend/build/
+backend/dist/
+
+# --- Environment Variables (CRITICAL) ---
+# This ensures your OpenAI API key never goes to GitHub
+.env
+*.env
+
+# --- Logs & OS Files ---
+logs
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# --- Editor Directories ---
+.vscode/
+.idea/
+*.swp
