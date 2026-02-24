@@ -1,4 +1,6 @@
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://context-clues-service.onrender.com";
+
+// const API_BASE_URL = "http://localhost:8000";
 
 // 1. The POST function (Used for sending guesses and getting clues)
 export async function callBackend(endpoint, payload) {
