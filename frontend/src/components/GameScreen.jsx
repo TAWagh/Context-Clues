@@ -78,7 +78,7 @@ export default function GameScreen({
         <div className="w-full max-w-5xl mx-auto flex items-center justify-between font-sans text-[11px] font-semibold uppercase tracking-[0.2em]">
           <div>
             {timeLeft !== null && (
-              <div className="flex items-center gap-2 text-black bg-white px-3 py-1.5 rounded-full border border-slate-200">
+              <div className="flex items-center gap-2 text-black px-3">
                 <Clock className="w-3 h-3 text-slate-600" />
                 {formatTime(timeLeft)}
               </div>
@@ -109,7 +109,7 @@ export default function GameScreen({
         {/* Word Display Area */}
           <div className="pt-8 mb-[clamp(0.75rem,2vh,2.5rem)]">
           <div className="font-sans text-[11px] font-semibold text-slate-400 uppercase tracking-[0.2em] mb-4">
-            <span className="text-slate-500">{theme} - {difficulty}</span>
+            <span className="text-slate-500">{theme} • {difficulty}</span>
           </div>
             <div className="flex items-baseline gap-4 mb-4">
             <h1 className="text-4xl md:text-5xl font-normal text-black tracking-tight">
@@ -229,8 +229,7 @@ export default function GameScreen({
           {isSkipping ? (
             <div className="mb-4">
               <div
-                className={`w-full ${responseControlHeightClass} border-2 border-black text-black font-sans font-semibold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 rounded-none opacity-80`}
-                style={{ borderColor: 'black', borderRadius: 0 }}
+                className={`w-full ${responseControlHeightClass} font-sans font-semibold text-xs uppercase tracking-[0.2em] flex items-center gap-2 rounded-none opacity-80`}
               >
                 Skipped. Moving to next word...
               </div>
@@ -238,7 +237,7 @@ export default function GameScreen({
           ) : isTimedNextWordTransition ? (
             <div className="mb-4">
               <div
-                className={`w-full ${responseControlHeightClass} border-2 border-black text-black font-sans font-semibold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 rounded-none opacity-80`}
+                className={`w-full ${responseControlHeightClass} font-sans font-semibold text-xs uppercase tracking-[0.2em] flex items-center gap-2 rounded-none opacity-80`}
                 style={{ borderColor: 'black', borderRadius: 0 }}
               >
                 Next word
@@ -282,7 +281,7 @@ export default function GameScreen({
                   <button
                     type="button"
                     onClick={() => startNewRound()}
-                    className={`w-full ${responseControlHeightClass} border-2 border-black text-black font-sans font-semibold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 hover:bg-black hover:text-white rounded-none`}
+                    className={`w-full ${responseControlHeightClass} font-sans font-semibold text-xs uppercase tracking-[0.2em] flex items-center gap-2 rounded-none opacity-80`}
                     style={{ borderColor: 'black', borderRadius: 0 }}
                   >
                     Next Word
